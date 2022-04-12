@@ -28,7 +28,7 @@ body {
     width: 400px;
     height: 380px;
     background-color: #2B2E33;
-    border-radius: 20px;
+    border-radius: 30px;
     display: flex;
     flex-direction: column;
     color: #CFCCCE;
@@ -66,7 +66,7 @@ body {
     padding-top: 20px;
 }
 
-.ratingBtns {
+#ratingBtns {
   
     display: flex;
     justify-content: space-between;
@@ -111,4 +111,52 @@ body {
     background-color: white;
     color: #D0700F;
     font-weight: bolder;
+}
+
+
+
+
+/* ******* SUBMIT PAGE ******** */
+
+.thanksCont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.image {
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#selection {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 20px 0 10px 0;
+    padding: 10px 0px 10px 0px;
+    background-color:#3C4048;
+    border-radius: 20px;
+    width: 200px;
+    color: #D0700F;
+    font-weight: bold;
+}
+
+.thankYou {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px 0px 0px;
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+}
+
+.message {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+    margin: 0px 15px 0px 15px;
+    line-height: 24px;
 }
