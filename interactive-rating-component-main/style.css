@@ -128,9 +128,10 @@ body {
     padding-bottom: 10px;
     display: flex;
     justify-content: center;
+    
 }
 
-#selection {
+.selection {
     display: flex;
     justify-content: center;
     text-align: center;

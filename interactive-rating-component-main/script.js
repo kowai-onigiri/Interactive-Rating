@@ -5,13 +5,25 @@
 //     numBtn.style.backgroundColor="black";
 // })
 const buttons = document.querySelectorAll('.num');
+let displayNum = ""
 
 buttons.forEach(function(currentBtn) {
     currentBtn.addEventListener('click', function() {
         currentBtn.style.backgroundColor = "#6C666A";
+        displayNum += currentBtn.innerHTML;
+        return displayNum;
+
         
     });
 });
+
+
+// const displayNum = buttons.forEach(function(currentBtn) {
+//     currentBtn.addEventListener('click', function() {
+//         let displayNum = currentBtn.innerHTML;
+//         console.log(displayNum);
+//     })
+// })
 
 
 const submit = document.getElementById('subBtn');
@@ -19,7 +31,6 @@ const card = document.getElementById('ratingCard');
 const cardContent = document.getElementById('cardCont')
 
 submit.addEventListener('click', function() {
-    // location.href = "submit.html";
     card.removeChild(cardContent);
 
     const newContainer = document.createElement('div');
@@ -35,13 +46,18 @@ submit.addEventListener('click', function() {
     thanksImg.classList.add('thanksImg');
     thanksCont.appendChild(thanksImg);
 
-    const image = document.createElement('img');
-    image.src = 'interactive-rating-component-main\images\illustration-thank-you.svg';
-    thanksImg.appendChild(image);
+    const image = document.createElement('div');
+    image.classList.add('image');
+    thanksCont.appendChild(image);
+
+    const imageSVG = document.createElement('img');
+    imageSVG.classList.add('imageSVG');
+    imageSVG.src = "images/illustration-thank-you.svg";
+    image.appendChild(imageSVG);
 
     const selection = document.createElement('div');
     selection.classList.add('selection');
-    selection.textContent = "You selected 2 out of 5.";
+    selection.textContent = `You selected ${displayNum} out of 5.`;
     thanksCont.appendChild(selection);
 
     const thankYou = document.createElement('div');
